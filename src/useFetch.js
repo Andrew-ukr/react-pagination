@@ -10,7 +10,7 @@ export const useFetch = () => {
   const getProducts = async () => {
     const response = await fetch(url);
     const data = await response.json();
-    setData(paginate(data));
+    setData(paginate(data)); // в paginate ми формуємо новий мавив зі списком масивів із заданою кількостю значень в ньому
     setLoading(false);
   };
 
@@ -18,5 +18,5 @@ export const useFetch = () => {
     getProducts();
   }, []);
 
-  return { loading, data };
+  return { loading, data }; // із useFetch повертаємо обєкт із значеннями state, в подальшому при імпорті useFetch буде можливість деструктивувати { loading, data }
 };

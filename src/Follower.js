@@ -1,6 +1,6 @@
 import React from "react";
 
-const Follower = ({ id, login, html_url, avatar_url }) => {
+const Follower = ({ login, html_url, avatar_url }) => {
   return (
     <article className="card">
       <img src={avatar_url} alt={login} />
